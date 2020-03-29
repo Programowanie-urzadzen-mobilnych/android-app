@@ -1,3 +1,6 @@
 [submodule "data-store"]
 	path = data-store
-	url = git@github.com:Programowanie-urzadzen-mobilnych/data-storage.git
+	url = https://github.com/Programowanie-urzadzen-mobilnych/data-storage.git
+[submodule "representation"]
+	path = representation
+	url = https://github.com/Programowanie-urzadzen-mobilnych/presentation

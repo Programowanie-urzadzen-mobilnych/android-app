@@ -1,3 +1,4 @@
 rootProject.name='Smart River'
 include ':app'
 include ':data-store'
+include ':representation'
