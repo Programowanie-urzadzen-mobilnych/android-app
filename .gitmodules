@@ -7,3 +7,6 @@
 [submodule "access-control"]
 	path = access-control
 	url = https://github.com/Programowanie-urzadzen-mobilnych/access-control
+[submodule "watchdog"]
+	path = watchdog
+	url = https://github.com/Programowanie-urzadzen-mobilnych/watchdog
