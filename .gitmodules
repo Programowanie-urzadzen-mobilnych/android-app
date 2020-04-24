@@ -1,0 +1,15 @@
+[submodule "data-store"]
+	path = data-store
+	url = https://github.com/Programowanie-urzadzen-mobilnych/data-storage.git
+[submodule "representation"]
+	path = representation
+	url = https://github.com/Programowanie-urzadzen-mobilnych/presentation
+[submodule "access-control"]
+	path = access-control
+	url = https://github.com/Programowanie-urzadzen-mobilnych/access-control
+[submodule "watchdog"]
+	path = watchdog
+	url = https://github.com/Programowanie-urzadzen-mobilnych/watchdog
+[submodule "bluetooth"]
+	path = bluetooth
+	url = https://github.com/Programowanie-urzadzen-mobilnych/bluetooth
