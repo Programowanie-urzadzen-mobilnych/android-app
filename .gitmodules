@@ -10,3 +10,6 @@
 [submodule "watchdog"]
 	path = watchdog
 	url = https://github.com/Programowanie-urzadzen-mobilnych/watchdog
+[submodule "bluetooth"]
+	path = bluetooth
+	url = https://github.com/Programowanie-urzadzen-mobilnych/bluetooth
