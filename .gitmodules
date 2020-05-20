@@ -13,3 +13,6 @@
 [submodule "bluetooth"]
 	path = bluetooth
 	url = https://github.com/Programowanie-urzadzen-mobilnych/bluetooth
+[submodule "data-store-api"]
+	path = data-store-api
+	url = https://github.com/Programowanie-urzadzen-mobilnych/data-storage-api
