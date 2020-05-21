@@ -1,6 +1,7 @@
 rootProject.name='Smart River'
 include ':app'
 include ':data-store'
+inclide ':data-store-api'
 include ':representation'
 include ':access-control'
 include ':watchdog'
