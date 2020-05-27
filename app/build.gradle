@@ -36,4 +36,5 @@ dependencies {
     implementation project(path: ':data-store')
     implementation project(path: ':access-control')
     implementation project(path: ':bluetooth')
+    implementation project(path: ':data-store-api')
 }
