@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">@color/PURPLE_HEART</color>
+    <color name="colorPrimaryDark">@color/ULTRAMARINE</color>
+    <color name="colorAccent">@color/ROBIN_EGG_BLUE</color>
+
+    <color name="PURPLE_HEART">#673AB7</color>
+    <color name="ULTRAMARINE">#3700B3</color>
+    <color name="ROBIN_EGG_BLUE">#03DAC5</color>
 </resources>

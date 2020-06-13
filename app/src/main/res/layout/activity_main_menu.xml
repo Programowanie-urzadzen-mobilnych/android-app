@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="menu.MainMenu">
+
+    <include
+        android:id="@+id/main_menu_action_bar"
+        layout="@layout/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+
+        <Button
+            android:id="@+id/measurements_main_menu_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/MEASUREMENTS" />
+
+        <Button
+            android:id="@+id/authorization_main_menu_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/AUTHORIZATION" />
+
+        <Button
+            android:id="@+id/update_firmware_main_menu_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/UPDATE_FIRMWARE" />
+
+        <Button
+            android:id="@+id/settings_main_menu_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/SETTINGS" />
+    </LinearLayout>
+
+</LinearLayout>
