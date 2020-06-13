@@ -45,6 +45,7 @@ public class MainMenu extends AppCompatActivity {
         }
 
         Button measurements = findViewById(R.id.measurements_main_menu_button);
+        Button download = findViewById(R.id.download_main_menu_button);
         Button authorization = findViewById(R.id.authorization_main_menu_button);
         Button updateFirmware = findViewById(R.id.update_firmware_main_menu_button);
         Button settings = findViewById(R.id.settings_main_menu_button);
@@ -53,6 +54,14 @@ public class MainMenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), Measurements.class);
+                startActivity(i);
+            }
+        });
+
+        download.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), com.example.bluetooth.DownloadFiles.class);
                 startActivity(i);
             }
         });
