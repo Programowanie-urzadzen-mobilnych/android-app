@@ -44,11 +44,6 @@
             android:layout_height="wrap_content"
             android:text="@string/SETTINGS" />
 
-        <Button
-            android:id="@+id/log_out_1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/LOGOUT" />
     </LinearLayout>
 
 </LinearLayout>
