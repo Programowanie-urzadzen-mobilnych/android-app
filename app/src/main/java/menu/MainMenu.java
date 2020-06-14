@@ -1,5 +1,6 @@
 package menu;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.access_control.ChangePassword;
+import com.example.access_control.LoginMain;
+
+import java.io.File;
+import java.io.FileOutputStream;
 
 import measurements.Measurements;
 import pl.grupa33inf.ssi.R;
@@ -48,6 +53,7 @@ public class MainMenu extends AppCompatActivity {
         Button authorization = findViewById(R.id.authorization_main_menu_button);
         Button updateFirmware = findViewById(R.id.update_firmware_main_menu_button);
         Button settings = findViewById(R.id.settings_main_menu_button);
+        Button logout = findViewById(R.id.log_out_1);
 
         measurements.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,5 +91,38 @@ public class MainMenu extends AppCompatActivity {
 //                startActivity(i);
             }
         });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), LoginMain.class);
+                EndSession();
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void EndSession()
+    {
+        String certificate = "";
+        File file = new File(this.getFilesDir(), "session_information.json");
+        String filename = "session_information.json";
+        String fileContents = "{\n" +
+                "  \"Session_Info:\":\n" +
+                "  [\n" +
+                "    {\n" +
+                "      \"Certificate\": \"No_User\"\n" +
+                "    }\n" +
+                "  ]\n" +
+                "}";
+        FileOutputStream outputStream;
+        try {
+            outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
+            outputStream.write(fileContents.getBytes());
+            outputStream.close();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
