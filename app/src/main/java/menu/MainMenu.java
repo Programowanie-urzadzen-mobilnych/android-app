@@ -61,8 +61,11 @@ public class MainMenu extends AppCompatActivity {
         download.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String deviceName = getIntent().getExtras().getString("deviceName");
                 Intent i = new Intent(v.getContext(), com.example.bluetooth.DownloadFiles.class);
+                i.putExtra("deviceName", deviceName);
                 startActivity(i);
+
             }
         });
 

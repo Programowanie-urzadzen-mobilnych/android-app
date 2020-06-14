@@ -17,7 +17,7 @@ import menu.MainMenu;
 public class MainActivity extends AppCompatActivity {
 	private final int CONNECTION_REQUEST_CODE = 0;
 	private final int LOGIN_REQUEST_CODE = 1;
-
+	public String deviceName;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -36,10 +36,12 @@ public class MainActivity extends AppCompatActivity {
 //				 recognise if everything is ok with connection
 //				Intent i = new Intent(this, com.bluetooth.ConnectionValidation.class);
 //				startActivityForResult(i, CONNECTION_REQUEST_CODE);
+				Intent b = new Intent(MainActivity.this, com.example.bluetooth.ConnectDevice.class);
+				startActivityForResult(b, CONNECTION_REQUEST_CODE);
 
 				// Following is temporary - until bluetooth team do the upper thing.
-				Intent i = new Intent(v.getContext(), LoginMain.class);
-				startActivityForResult(i, LOGIN_REQUEST_CODE);
+				//Intent i = new Intent(v.getContext(), LoginMain.class);
+				//startActivityForResult(i, LOGIN_REQUEST_CODE);
 			}
 		});
 
@@ -51,14 +53,13 @@ public class MainActivity extends AppCompatActivity {
 		switch(requestCode){
 			case CONNECTION_REQUEST_CODE:
 				if(resultCode == RESULT_OK){
-					boolean valid = data.getBooleanExtra("valid", false);
-					if(valid){
+					deviceName = data.getData().toString();
 						Intent i = new Intent(this, LoginMain.class);
+						i.putExtra("deviceName", deviceName);
 						startActivityForResult(i, LOGIN_REQUEST_CODE);
 					} else {
 						Toast.makeText(getApplicationContext(), "Wystąpił błąd w trakcie weryfikacji połączenia z węzłem pomiarowym", Toast.LENGTH_SHORT).show();
 					}
-				}
 				break;
 			case LOGIN_REQUEST_CODE:
 				if (resultCode == RESULT_OK) {
@@ -68,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
 					} else {
 						Intent i = new Intent(this, MainMenu.class);
 						i.putExtra("role", role);
+						i.putExtra("deviceName", deviceName);
 						startActivity(i);
 					}
 				}
