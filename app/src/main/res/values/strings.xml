@@ -6,4 +6,5 @@
     <string name="MAIN_MENU">Menu główne</string>
     <string name="NO_CONNCTION_TO_THE_MEASURING_NODE">Brak połączenia z węzłem pomiarowym</string>
     <string name="CONNECT">Połącz</string>
+    <string name="SETTINGS_ACTION_BAR_TITLE">@string/SETTINGS</string>
 </resources>
