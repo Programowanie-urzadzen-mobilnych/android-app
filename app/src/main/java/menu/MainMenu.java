@@ -79,10 +79,8 @@ public class MainMenu extends AppCompatActivity {
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "TODO: activity for settings", Toast.LENGTH_SHORT).show();
-//                TODO: activity for settings
-//                Intent i = new Intent(v.getContext(), Measurements.class);
-//                startActivity(i);
+                Intent i = new Intent(v.getContext(), Settings.class);
+                startActivity(i);
             }
         });
     }
